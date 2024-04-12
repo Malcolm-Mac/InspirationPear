@@ -3,7 +3,6 @@ import { animateWithGsap } from "@/utils/animations";
 import { useGSAP } from "@gsap/react";
 import Image from "next/image";
 import React, { useState } from "react";
-import clsx from "clsx";
 
 //https://res.cloudinary.com/ds3etgheh/image/upload/v1711227942/frame2_ubtuvp.png
 
@@ -108,7 +107,7 @@ const GetInOnAction = () => {
 
             <div className="flex justify-end items-center mt-24">
               <div className="border border-gray w-full" />
-              <div className="p-1 rounded-full bg-gray"/>
+              <div className="p-1 rounded-full bg-gray" />
             </div>
 
             <div className="my-12">
@@ -116,12 +115,11 @@ const GetInOnAction = () => {
                 <div
                   key={route.title}
                   onClick={() => handleScreenChange(i)}
-                  className={clsx(
-                    "flex items-center mx-auto gap-2 p-2 my-2 text-gray w-1/2 cursor-pointer",
+                  className={`"flex items-center mx-auto gap-2 p-2 my-2 text-gray w-1/2 cursor-pointer" ${
                     route.isActive
                       ? "border border-white rounded-3xl text-white"
                       : "border-none hover:bg-gray hover:rounded-3xl hover:text-white"
-                  )}
+                  }`}
                 >
                   <div className="mx-3">
                     <Image
